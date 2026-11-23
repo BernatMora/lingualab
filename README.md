@@ -41,6 +41,9 @@ lingualab/
 
 ## Publicar
 
+Un sol guió ho fa tot: **`./publica.sh`** (copia a la RPi i reinicia el servei) o
+**`./publica.sh --git`** (a més, commit + push a GitHub; Pages es refresca sol).
+
 ### GitHub Pages
 
 ```bash
