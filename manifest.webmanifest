@@ -1,0 +1,17 @@
+{
+  "name": "LinguaLab · Anglès B2–C1",
+  "short_name": "LinguaLab",
+  "description": "Textos bilingües anglès/castellà amb vocabulari clau, flashcards, quiz i veu. El progrés es desa al navegador.",
+  "lang": "ca",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0e1423",
+  "theme_color": "#101828",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
