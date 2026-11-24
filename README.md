@@ -11,7 +11,7 @@ castellà), vocabulari clau, flashcards, quiz de traducció i lectura en veu alt
 
 | Secció | Què hi ha |
 |---|---|
-| **Biblioteca** | 10 textos bilingües (notícies i històries) amb nivell B2 → C1, cercador i filtre per nivell |
+| **Biblioteca** | 18 textos bilingües (notícies i històries) amb nivell B2 → C1, 126 expressions de vocabulari, cercador i filtre per nivell |
 | **Lectura** | Text anglès + traducció que es pot amagar, veu `en-GB` (Web Speech), vocabulari clau amb pronúncia |
 | **Flashcards** | Targetes anglès → castellà, barreja, només difícils, marcar coneguda |
 | **Quiz** | 4 opcions per expressió, encerts acumulats i percentatge |
@@ -34,9 +34,21 @@ Si esborres les dades del navegador ho perds tot: fes servir
 lingualab/
 ├── index.html            ← tota l'app (HTML + CSS + JS en un sol fitxer)
 ├── manifest.webmanifest  ← PWA
-├── sw.js                 ← memòria cau offline
+├── sw.js                 ← memòria cau offline (puja CACHE quan publiquis una versió nova)
 ├── icons/                ← icona SVG + PNG (32, 180, 192, 512)
-└── lingualab-server.py   ← servidor estàtic de la RPi (port 3054)
+├── lingualab-server.py   ← servidor estàtic de la RPi (port 3054)
+├── publica.sh            ← desplega a la RPi (+ GitHub amb --git)
+├── afegeix-a-l-aula.py   ← afegeix o actualitza la targeta a l'Aula BernatLab
+└── tools/prepara-index.py ← posa la capçalera PWA i el service worker al fitxer nou
+```
+
+### Publicar una versió nova (l'app es treballa com un fitxer solt)
+
+```bash
+cp ~/Desktop/LinguaLab_English_2026_vX.html /tmp/nova.html
+python3 tools/prepara-index.py /tmp/nova.html index.html   # capçalera PWA + service worker
+sed -i '' "s/lingualab-v2/lingualab-v3/" sw.js              # puja la versió de la memòria cau
+./publica.sh --git                                          # RPi + GitHub Pages
 ```
 
 ## Publicar
