@@ -11,7 +11,7 @@ castellà), vocabulari clau, flashcards, quiz de traducció i lectura en veu alt
 
 | Secció | Què hi ha |
 |---|---|
-| **Biblioteca** | 40 textos bilingües (notícies, històries i articles) amb nivell B2 → C1, 287 expressions de vocabulari, cercador i filtre per tipus |
+| **Biblioteca** | 48 textos bilingües (notícies, històries i articles) amb nivell B2 → C1, 371 expressions de vocabulari, cercador i filtre per tipus |
 | **Lectura** | Text anglès + traducció que es pot amagar, veu `en-GB` (Web Speech), vocabulari clau amb pronúncia |
 | **Flashcards** | Targetes anglès → castellà, barreja, només difícils, marcar coneguda |
 | **Quiz** | 4 opcions per expressió, encerts acumulats i percentatge |

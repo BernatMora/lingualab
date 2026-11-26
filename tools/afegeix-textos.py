@@ -44,6 +44,7 @@ def literal_initial_texts(html: str) -> tuple[int, int]:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--llista", action="store_true")
+    ap.add_argument("--dades", default=str(DADES), help="fitxer JSON amb els textos")
     a = ap.parse_args()
 
     html = io.open(INDEX, encoding="utf-8").read()
@@ -51,7 +52,7 @@ def main():
     existeixen = set(re.findall(r'"id":\s*"([^"]+)"', html[inici:final]))
     existeixen |= set(re.findall(r"\bid:\s*['\"]([^'\"]+)['\"]", html[inici:final]))
 
-    nous_tots = json.loads(io.open(DADES, encoding="utf-8").read())
+    nous_tots = json.loads(io.open(a.dades, encoding="utf-8").read())
     nous = [t for t in nous_tots if t["id"] not in existeixen]
 
     print(f"textos al fitxer: {len(nous_tots)} · ja hi són: {len(nous_tots) - len(nous)} · per afegir: {len(nous)}")

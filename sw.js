@@ -1,6 +1,6 @@
 // LinguaLab · service worker mínim (offline bàsic)
 // Canvia CACHE quan canviï el contingut per forçar l'actualització.
-const CACHE = 'lingualab-v3';
+const CACHE = 'lingualab-v4';
 const ASSETS = [
   './',
   'index.html',
